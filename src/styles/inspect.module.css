@@ -1,0 +1,68 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+button {
+  border: none;
+}
+.slider {
+  width: 1200vw;
+}
+.content {
+  margin-top: 15vh;
+  width: 100vw;
+  float: left;
+}
+.top {
+  height: 20vh;
+  padding: 2rem;
+}
+.mbti__counter {
+  font-size: 2rem;
+  font-weight: bold;
+  height: 10vh;
+}
+.mbti__progress__color {
+  color: pink;
+  font-size: 1.5em;
+}
+.mbti__end__color {
+  color: black;
+}
+.mbti__question {
+  color: #4e4e4e;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.mbti__btn__box {
+  display: flex;
+  flex-direction: column;
+  width: 44%;
+  height: 25vh;
+  margin: 0 auto;
+}
+.mbti__button {
+  display: flex;
+  justify-content: center;
+  height: 45%;
+  font-size: 1.4rem;
+  margin: 1rem;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: rgba(110, 110, 110, 1);
+  border: 1px solid gray;
+  font-weight: 600;
+  border-radius: 6px;
+  border-color: #d0d0d0;
+}
+.mbti__button:active {
+  color: #fff;
+  background-color: #ed6174;
+  transform: scale(1);
+  transition: 90ms;
+  border: none;
+}
