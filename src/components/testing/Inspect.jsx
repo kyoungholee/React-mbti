@@ -1,5 +1,5 @@
 import React, { createRef, useEffect, useState } from "react";
-import styles from "../../styles/.module.css";
+import styles from "../../styles/inspect.module.css";
 import { useNavigate } from "react-router-dom";
 import Questions from "../../common/api/questionApi.json";
 
@@ -9,7 +9,7 @@ export default function Inspect() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const slideRef = createRef(null);
   const TOTAL_SLIDES = 12;
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [mbtiTest, setMbtiTest] = useState([]);
 
   const nextSlideFir = () => {
@@ -55,7 +55,7 @@ export default function Inspect() {
     setTimeout(() => {
       const examResult = result.join("");
       console.log("examResult", examResult);
-      history.push(`/result/${examResult}`);
+      navigate(`/result/${examResult}`);
     }, 3000);
   };
 
@@ -103,11 +103,7 @@ export default function Inspect() {
 
         {loading && (
           <div className={styles.loading__container}>
-            <img
-              className={styles.ticket}
-              src="img/flying.png"
-              alt="e-ticket"
-            />
+            검사 진행중
             <div className={styles.loading}></div>
           </div>
         )}
