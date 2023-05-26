@@ -10,11 +10,16 @@ strong {
 
 .container {
   text-align: center;
-  width: 90vw;
+  width: 100vw;
+}
+.icons {
+  margin-top: 27px;
+  height: 7vh;
 }
 .result {
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 700;
+  color: darkgreen;
   margin: 1.24rem;
 }
 .result_type {
@@ -28,8 +33,6 @@ strong {
   color: pink;
   font-weight: 600;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.desTitle {
 }
 .desList {
   margin-top: 22px;

@@ -1,7 +1,8 @@
 import styles from "../../styles/countries.module.css";
 import { Link, useParams } from "react-router-dom";
 import Countries from "../../common/api/coutriesApi.json";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlane } from "@fortawesome/free-solid-svg-icons";
 const Profile = () => {
   let { nation } = useParams();
 
@@ -14,7 +15,15 @@ const Profile = () => {
       <div className={styles.wrapper} key={Countries[`${nation}`].id}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <p className={styles.result}> 결과 화면 </p>
+            <FontAwesomeIcon
+              icon={faPlane}
+              className={styles.icons}
+              style={{ color: "#2b82d4" }}
+            />
+            <p className={styles.result}>
+              {" "}
+              본인에 MBTI와 여행지를 확인해보세요.{" "}
+            </p>
             <img src={Countries[`${nation}`].img} alt="해당 나라 사진" />
           </div>
           <div className={styles.result_type}>

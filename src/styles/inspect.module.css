@@ -60,6 +60,7 @@ button {
   font-weight: 600;
   border-radius: 6px;
   border-color: #d0d0d0;
+  cursor: pointer;
 }
 .mbti__button:active {
   color: #fff;
