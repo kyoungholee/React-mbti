@@ -2,6 +2,7 @@ import React, { createRef, useEffect, useState } from "react";
 import styles from "../../styles/inspect.module.css";
 import { useNavigate } from "react-router-dom";
 import Questions from "../../common/api/questionApi.json";
+import FadeLoader from "react-spinners/FadeLoader";
 
 export default function Inspect() {
   const [loading, setLoading] = useState(false);
@@ -20,6 +21,7 @@ export default function Inspect() {
     setCurrentSlide(currentSlide + 1);
     slideRef.current.style.transform += "translateX(-100vw)";
   };
+
   const nextSlideSec = () => {
     setMbtiTest(mbtiTest + Questions[num].answers[1].type);
     console.log(mbtiTest);
@@ -103,8 +105,15 @@ export default function Inspect() {
 
         {loading && (
           <div className={styles.loading__container}>
-            검사 진행중
-            <div className={styles.loading}></div>
+            잠시만 기다려 주세요. 검사가 진행중입니다.
+            <FadeLoader
+              className={styles.spinner}
+              color="#36d7b7"
+              height={24}
+              width={14}
+              radius={44}
+              margin={47}
+            />
           </div>
         )}
       </section>
