@@ -16,7 +16,7 @@ export default function Home() {
           </div>
           <div className={styles.middle}>
             <h2 className={styles.header}>올해는 어디로 갈까?</h2>
-            <p>총 16개의 유형의 MBTI성향을 기반으로</p>
+            <p>16개의 MBTI 유형을 토대로</p>
             <p>가장 잘 어울리는 여행지를 추천해드려요.</p>
           </div>
           <div className={styles.bottom}>
