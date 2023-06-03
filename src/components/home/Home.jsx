@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/home.module.css";
+import SEOMetaTag from "../../pages/SEOMetaTag";
+
 
 export default function Home() {
   return (
     <>
+    <SEOMetaTag title="여행 Mbti 검사 시작페이지" description="mbti검사를 통해 여행 장소를 알려주는 사이트" keywords="검사, 여행, mbti"  />
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.top}>

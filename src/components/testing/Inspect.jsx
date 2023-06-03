@@ -3,6 +3,8 @@ import styles from "../../styles/inspect.module.css";
 import { useNavigate } from "react-router-dom";
 import Questions from "../../common/api/questionApi.json";
 import FadeLoader from "react-spinners/FadeLoader";
+import SEOMetaTag from "../../pages/SEOMetaTag";
+
 
 export default function Inspect() {
   const [loading, setLoading] = useState(false);
@@ -64,10 +66,13 @@ export default function Inspect() {
   // 12중 몇번쨰인지 나타냄
   useEffect(() => {
     currentSlide > TOTAL_SLIDES && mbtiChecker();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide]);
 
   return (
     <>
+    <SEOMetaTag title="여행 Mbti 검사페이지" description="12개 문항을 통해 mbti를 알 수 있습니다." keywords="검사, 여행, mbti"/>
+
       <section className={styles.container}>
         {!loading && (
           <div className={styles.slider} ref={slideRef}>

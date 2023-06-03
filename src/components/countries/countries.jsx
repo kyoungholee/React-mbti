@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import Countries from "../../common/api/coutriesApi.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
+import SEOMetaTag from "../../pages/SEOMetaTag";
+
 const Profile = () => {
   let { nation } = useParams();
 
@@ -12,6 +14,8 @@ const Profile = () => {
 
   return (
     <>
+    <SEOMetaTag title="나라 별 결과페이지" description="본인의 mbti를 알고 여행 장소를 알 수 있다." keywords="검사, 여행, mbti" />
+
       <div className={styles.wrapper} key={Countries[`${nation}`].id}>
         <div className={styles.container}>
           <div className={styles.header}>
