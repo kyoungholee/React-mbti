@@ -6,6 +6,7 @@ import Countries from "./components/countries/countries";
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/result/:nation" element={<Countries />} />
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 
